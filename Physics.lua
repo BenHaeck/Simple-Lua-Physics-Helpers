@@ -28,8 +28,7 @@ function Physics.MakeCollider (x,y,w,h, self)
 	self.h = h;
 
 	function self:Collide (coll, dim)
-		local success =
-		Physics.Collide1D (self.x, self.w, coll.x, coll.w) and Physics.Collide1D (self.y, self.h, coll.y, coll.h);
+		local success = Physics.Collide1D (self.x, self.w, coll.x, coll.w) and Physics.Collide1D (self.y, self.h, coll.y, coll.h);
 		if not success then return false; end
 		if dim == "x" then
 			local dir = 1
