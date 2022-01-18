@@ -1,6 +1,6 @@
 
 
-Physics = {dragMult = 10}
+local Physics = {dragMult = 10};
 
 function Physics.Collide1D (p1,s1,p2,s2) 
 	local dist = math.abs(p1 - p2);
@@ -46,3 +46,5 @@ function Physics.MakeCollider (x,y,w,h, self)
 	return self;
 end
 
+
+return Physics;
